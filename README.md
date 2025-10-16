@@ -11,7 +11,7 @@ Allows for processing items in a JSON response as they are being downloaded, ena
 ##### Cargo.toml
 ```toml
 [dependencies]
-http-json-stream = { version = "0.1.0", features = ["gzip"] }
+http-json-stream = { version = "0.1.1", features = ["gzip"] }
 futures = "0.3"
 serde = "1.0"
 ```

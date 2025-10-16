@@ -42,7 +42,7 @@ impl JsonPart {
     }
     /// Parse object values as if they were list entries, ignoring the keys.
     ///
-    /// This influences the index counted by [`JsonPart::group`], now also counting objects.
+    /// This influences the index counted by [`group`](JsonPart::group), now also counting objects.
     /// ```
     /// # use http_json_stream::JsonPart;
     /// JsonPart::level(2).parse_object_values();
@@ -51,9 +51,9 @@ impl JsonPart {
         self.parse_object_values = true;
         self
     }
-    /// Do not parse list entries and use [`JsonPart::parse_object_values`] instead.
+    /// Do not parse list entries and use [`parse_object_values`](JsonPart::parse_object_values) instead.
     ///
-    /// This influences the index counted by [`JsonPart::group`], now only counting objects.
+    /// This influences the index counted by [`group`](JsonPart::group), now only counting objects.
     /// ```
     /// # use http_json_stream::JsonPart;
     /// JsonPart::level(2).ignore_list_entries();

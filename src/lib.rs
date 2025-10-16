@@ -1,12 +1,12 @@
 //! An asynchronous JSON streamer for HTTP network requests.
 //!
-//! See the [README](https://github.com/LMOORS30/http-json-streamer#http-json-streamer) for additional information, [Installation](https://github.com/LMOORS30/http-json-streamer#cargotoml) and [Features](https://github.com/LMOORS30/http-json-streamer#features).
+//! See the [README](https://github.com/LMOORS30/http-json-stream#http-json-stream) for additional information, [Installation](https://github.com/LMOORS30/http-json-stream#cargotoml) and [Features](https://github.com/LMOORS30/http-json-stream#features).
 //!
-//! [![github-com]](https://github.com/LMOORS30/http-json-streamer)<br>[![crates-io]](https://crates.io/crates/http-json-streamer)<br>[![docs-rs]](crate)
+//! [![github-com]](https://github.com/LMOORS30/http-json-stream)<br>[![crates-io]](https://crates.io/crates/http-json-stream)<br>[![docs-rs]](crate)
 //!
-//! [github-com]: https://img.shields.io/badge/github.com-LMOORS30/http--json--streamer-5e728a?labelColor=505050&style=for-the-badge&logo=github
-//! [crates-io]: https://img.shields.io/badge/crates.io-http--json--streamer-5e888a?labelColor=505050&style=for-the-badge&logo=rust
-//! [docs-rs]: https://img.shields.io/badge/docs.rs-http--json--streamer-5e8a76?labelColor=505050&style=for-the-badge&logo=docs.rs
+//! [github-com]: https://img.shields.io/badge/github.com-LMOORS30/http--json--stream-5e728a?labelColor=505050&style=for-the-badge&logo=github
+//! [crates-io]: https://img.shields.io/badge/crates.io-http--json--stream-5e888a?labelColor=505050&style=for-the-badge&logo=rust
+//! [docs-rs]: https://img.shields.io/badge/docs.rs-http--json--stream-5e8a76?labelColor=505050&style=for-the-badge&logo=docs.rs
 //!
 //! # Example
 //! ```
@@ -36,8 +36,10 @@
 //! }
 //! ```
 //! <br>
-//! 
+//!
 //! See [`JsonStream`] and [`JsonPart`] for more information.
+//!
+//! <br>
 
 mod body_decoder;
 mod error;

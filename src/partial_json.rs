@@ -200,12 +200,15 @@ impl<T: DeserializeOwned> Iterator for PartialJson<T> {
             let char = self.buffer[self.i] as char;
             self.i += 1;
             if self.in_string {
-                if char == '"' && self.last_char != '\\' {
-                    self.in_string = false;
+                if self.last_char == '\\' {
+                    self.last_char = '\0';
+                } else {
+                    if char == '"' {
+                        self.in_string = false;
+                    }
+                    self.last_char = char;
                 }
-            } else if char.is_whitespace() {
-                continue;
-            } else {
+            } else if !char.is_ascii_whitespace() {
                 if let '"' = char {
                     self.in_string = true;
                 } else if let '[' | '{' = char {
@@ -237,8 +240,8 @@ impl<T: DeserializeOwned> Iterator for PartialJson<T> {
                         self.drain();
                     }
                 }
+                self.last_char = char;
             }
-            self.last_char = char;
         }
     }
 }
@@ -439,6 +442,13 @@ mod tests {
             parse_object_values: false,
         };
         run::<Item>(none, json, &[]);
+    }
+
+    #[test]
+    fn escape() {
+        run(lvl(1), r#"["\\"]"#, &["\\".to_string()]);
+        run(lvl(1), r#"["\\\", ", "\\"]"#, &["\\\", ".to_string(), "\\".to_string()]);
+        run(lvl(1), r#"["\\\n", ", \\", "\\n"]"#, &["\\\n".to_string(), ", \\".to_string(), "\\n".to_string()]);
     }
 
     #[test]

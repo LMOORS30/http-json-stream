@@ -2,7 +2,7 @@ HTTP JSON Stream<br>
 [<img alt="github.com" src="https://img.shields.io/badge/github.com-LMOORS30/http--json--stream-5e728a?labelColor=343942&style=for-the-badge&logo=github" height="20">](https://github.com/LMOORS30/http-json-stream)
 [<img alt="crates.io" src="https://img.shields.io/badge/crates.io-http--json--stream-5e888a?labelColor=343942&style=for-the-badge&logo=rust" height="20">](https://crates.io/crates/http-json-stream)
 [<img alt="docs.rs" src="https://img.shields.io/badge/docs.rs-http--json--stream-5e8a76?labelColor=343942&style=for-the-badge&logo=docs.rs" height="20">](https://docs.rs/http-json-stream)
-====
+================
 
 An asynchronous JSON streamer for HTTP network requests, inspired by the [hyper-json-stream](https://github.com/arnaudpoullet/hyper-json-stream) repository.
 

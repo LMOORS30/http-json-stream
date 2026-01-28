@@ -18,7 +18,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Correct documentation links
 - Relax dependency version requirements
 
-## [0.1.0] - 2029-09-12
+## [0.1.0] - 2025-09-12
 
 ### Added
 
